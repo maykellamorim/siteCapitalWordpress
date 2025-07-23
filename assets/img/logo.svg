@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Fundo transparente -->
+  <rect width="800" height="400" fill="none"/>
+  
+  <!-- Planta estilizada -->
+  <g transform="translate(400, 150)" fill="none" stroke="#FFFFFF" stroke-width="4">
+    <!-- Caule -->
+    <line x1="0" y1="0" x2="0" y2="80" stroke-width="5"/>
+    
+    <!-- Folhas (de baixo para cima) -->
+    <path d="M0,80 C-100,80 -120,40 0,40 C120,40 100,80 0,80 Z" />
+    <path d="M0,40 C-80,40 -100,10 0,10 C100,10 80,40 0,40 Z" />
+    <path d="M0,10 C-60,10 -80,-10 0,-10 C80,-10 60,10 0,10 Z" />
+  </g>
+  
+  <!-- Texto "CAPITAL" -->
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="15">CAPITAL</text>
+  
+  <!-- Texto "Agro Investors" -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle" letter-spacing="5">Agro Investors</text>
+  
+  <!-- Linhas decorativas -->
+  <line x1="250" y1="330" x2="350" y2="330" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="450" y1="330" x2="550" y2="330" stroke="#FFFFFF" stroke-width="2"/>
+</svg>

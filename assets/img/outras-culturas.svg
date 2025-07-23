@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="fundoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#fundoGrad)" rx="10"/>
+  
+  <!-- Ícones decorativos -->
+  <g opacity="0.3">
+    <circle cx="30" cy="30" r="8" fill="#FFFFFF"/>
+    <circle cx="170" cy="30" r="6" fill="#FFFFFF"/>
+    <circle cx="30" cy="170" r="6" fill="#FFFFFF"/>
+    <circle cx="170" cy="170" r="8" fill="#FFFFFF"/>
+    <circle cx="100" cy="40" r="4" fill="#FFFFFF"/>
+    <circle cx="160" cy="100" r="5" fill="#FFFFFF"/>
+    <circle cx="40" cy="100" r="5" fill="#FFFFFF"/>
+    <circle cx="100" cy="160" r="4" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Texto principal -->
+  <text x="100" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">
+    DENTRE OUTRAS
+  </text>
+  <text x="100" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">
+    DIVERSAS
+  </text>
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">
+    CULTURAS
+  </text>
+  
+  <!-- Ícone de plantas -->
+  <g transform="translate(100,30)">
+    <path d="M-10,0 Q-15,-8 -10,-15 Q-5,-12 0,-15 Q5,-12 10,-15 Q15,-8 10,0 Q5,-3 0,0 Q-5,-3 -10,0" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+  
+  <g transform="translate(100,170)">
+    <path d="M-8,0 Q-12,-6 -8,-12 Q-4,-9 0,-12 Q4,-9 8,-12 Q12,-6 8,0 Q4,-2 0,0 Q-4,-2 -8,0" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+</svg>

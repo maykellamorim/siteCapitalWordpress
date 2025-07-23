@@ -1,0 +1,582 @@
+/* 
+* CAPITAL - Agro Investors
+* Estilos personalizados
+*/
+
+:root {
+    /* Paleta de cores */
+    --primary-color: #0D4F27; /* Verde escuro */
+    --secondary-color: #3E8E41; /* Verde médio */
+    --accent-color: #D4A017; /* Amarelo terra */
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --gray-color: #6c757d;
+    --light-gray: #e9ecef;
+    
+    /* Fontes */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: var(--font-primary);
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.title-underline {
+    height: 4px;
+    width: 70px;
+    background-color: var(--accent-color);
+    margin-bottom: 25px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 15px 0;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+}
+
+.navbar-brand img.logo {
+    height: 70px;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .navbar-brand img.logo {
+    height: 55px;
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link {
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: 10px 15px !important;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 5px;
+    left: 15px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: calc(100% - 30px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(13, 79, 39, 0.6), rgba(13, 79, 39, 0.7)), url('../img/campo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Sobre Section */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Segmentos Section */
+.segment-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.card:hover .segment-icon {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Culturas Carousel */
+.carousel-inner {
+    transition: transform 1.2s ease-in-out;
+}
+
+.carousel-item {
+    transition: all 1.2s ease-in-out;
+}
+
+/* Garantir transição consistente para todos os slides */
+.carousel-item.active {
+    transition: all 1.2s ease-in-out !important;
+}
+
+.carousel-item.carousel-item-next,
+.carousel-item.carousel-item-prev {
+    transition: all 1.2s ease-in-out !important;
+}
+
+.cultura-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.cultura-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cultura-img {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cultura-card:hover .cultura-img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for carousel */
+@media (max-width: 768px) {
+    .cultura-img {
+        max-height: 150px;
+    }
+    
+    .cultura-card {
+        margin: 0 5px;
+    }
+}
+
+/* Soluções Section */
+.solution-item {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.solution-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.solution-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.solution-item:hover .solution-icon {
+    background-color: var(--secondary-color);
+    transform: rotateY(180deg);
+}
+
+.solution-item h4 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Contato Section */
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-form .form-control {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 70px;
+}
+
+.footer-logo {
+    height: 60px;
+}
+
+.footer h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer .social-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-icon:hover {
+    background-color: var(--secondary-color);
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+.newsletter-form .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 12px 15px;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form .form-control:focus {
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 15px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: auto;
+        padding: 120px 0 80px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-primary {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-logo {
+        height: 50px;
+    }
+}
+
+/* Carrossel de Culturas */
+.cultura-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cultura-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cultura-img {
+    max-height: 150px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.cultura-card:hover .cultura-img {
+    transform: scale(1.1);
+}
+
+#culturasCarousel .carousel-control-prev,
+#culturasCarousel .carousel-control-next {
+    background-color: rgba(13, 79, 39, 0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+#culturasCarousel .carousel-control-prev {
+    left: -25px;
+}
+
+#culturasCarousel .carousel-control-next {
+    right: -25px;
+}
+
+#culturasCarousel .carousel-control-prev:hover,
+#culturasCarousel .carousel-control-next:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+#culturasCarousel .carousel-control-prev-icon,
+#culturasCarousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsividade do Carrossel */
+@media (max-width: 767.98px) {
+    .cultura-img {
+        max-height: 120px;
+    }
+    
+    .cultura-card {
+        padding: 15px;
+    }
+    
+    #culturasCarousel .carousel-control-prev,
+    #culturasCarousel .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #culturasCarousel .carousel-control-prev {
+        left: -20px;
+    }
+    
+    #culturasCarousel .carousel-control-next {
+        right: -20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cultura-img {
+        max-height: 100px;
+    }
+    
+    .cultura-card {
+        padding: 10px;
+    }
+    
+    #culturasCarousel .carousel-control-prev,
+    #culturasCarousel .carousel-control-next {
+        display: none;
+    }
+}

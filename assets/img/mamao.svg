@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="mamaoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="polpaGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFB347;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="#f8f9fa"/>
+  <g transform="translate(100,100)">
+    <!-- Mamão -->
+    <ellipse cx="0" cy="0" rx="20" ry="35" fill="url(#mamaoGrad)" stroke="#FF6347" stroke-width="2"/>
+    <!-- Corte mostrando o interior -->
+    <path d="M-20,0 Q0,5 20,0 Q15,15 0,20 Q-15,15 -20,0" fill="url(#polpaGrad)"/>
+    <!-- Sementes -->
+    <circle cx="-8" cy="8" r="2" fill="#2F4F2F"/>
+    <circle cx="0" cy="12" r="2" fill="#2F4F2F"/>
+    <circle cx="8" cy="8" r="2" fill="#2F4F2F"/>
+    <circle cx="-4" cy="15" r="2" fill="#2F4F2F"/>
+    <circle cx="4" cy="15" r="2" fill="#2F4F2F"/>
+    <!-- Cabo -->
+    <rect x="-2" y="-38" width="4" height="6" fill="#228B22"/>
+    <!-- Folhas no topo -->
+    <g transform="translate(0,-35)">
+      <path d="M-8,-5 Q-12,-10 -8,-15 Q-4,-12 0,-15 Q4,-12 8,-15 Q12,-10 8,-5 Q4,-8 0,-5 Q-4,-8 -8,-5" fill="#228B22"/>
+    </g>
+    <!-- Brilho -->
+    <ellipse cx="-8" cy="-15" rx="5" ry="12" fill="#FFD700" opacity="0.4"/>
+    <!-- Linhas características -->
+    <path d="M0,-35 Q-8,-10 0,15 Q8,-10 0,-35" stroke="#FF6347" stroke-width="1" fill="none"/>
+  </g>
+  <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c5530">MAMÃO</text>
+</svg>
