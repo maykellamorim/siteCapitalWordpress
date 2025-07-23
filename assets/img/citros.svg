@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="laranjaGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="limaoGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFFF00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="#f8f9fa"/>
+  <g transform="translate(100,100)">
+    <!-- Laranja -->
+    <circle cx="-15" cy="-5" r="18" fill="url(#laranjaGrad)" stroke="#FF6347" stroke-width="1"/>
+    <!-- Textura da laranja -->
+    <circle cx="-20" cy="-10" r="1" fill="#FF6347"/>
+    <circle cx="-12" cy="-8" r="1" fill="#FF6347"/>
+    <circle cx="-18" cy="-2" r="1" fill="#FF6347"/>
+    <circle cx="-10" cy="2" r="1" fill="#FF6347"/>
+    <circle cx="-8" cy="-12" r="1" fill="#FF6347"/>
+    
+    <!-- Limão -->
+    <ellipse cx="15" cy="-5" rx="12" ry="16" fill="url(#limaoGrad)" stroke="#DAA520" stroke-width="1"/>
+    <!-- Textura do limão -->
+    <circle cx="12" cy="-12" r="1" fill="#DAA520"/>
+    <circle cx="18" cy="-8" r="1" fill="#DAA520"/>
+    <circle cx="20" cy="-2" r="1" fill="#DAA520"/>
+    <circle cx="16" cy="3" r="1" fill="#DAA520"/>
+    <circle cx="10" cy="0" r="1" fill="#DAA520"/>
+    
+    <!-- Folhas -->
+    <ellipse cx="-25" cy="-15" rx="8" ry="5" fill="#228B22" transform="rotate(-30 -25 -15)"/>
+    <ellipse cx="25" cy="-15" rx="8" ry="5" fill="#228B22" transform="rotate(30 25 -15)"/>
+    <ellipse cx="0" cy="-25" rx="10" ry="6" fill="#32CD32"/>
+    
+    <!-- Galho -->
+    <line x1="0" y1="-20" x2="0" y2="25" stroke="#8B4513" stroke-width="3"/>
+    
+    <!-- Brilhos -->
+    <ellipse cx="-20" cy="-12" rx="4" ry="6" fill="#FFD700" opacity="0.6"/>
+    <ellipse cx="18" cy="-12" rx="3" ry="5" fill="#FFFF99" opacity="0.6"/>
+  </g>
+  <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c5530">CITROS</text>
+</svg>

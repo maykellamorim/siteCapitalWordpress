@@ -1,0 +1,41 @@
+# Configurações globais do Netlify
+[build]
+  publish = "/"
+  command = "# no build command"
+
+# Redirecionamentos e reescrita de URLs
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cabeçalhos HTTP personalizados
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' https:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:;"
+
+# Cabeçalhos específicos para recursos estáticos
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cabeçalhos para arquivos SVG
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Configurações de plugins
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  # Configurações do plugin Lighthouse
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"

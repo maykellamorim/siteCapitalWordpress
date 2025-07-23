@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fundo verde escuro -->
+  <rect width="64" height="64" fill="#0D4F27" rx="8" ry="8"/>
+  
+  <!-- Planta estilizada simplificada -->
+  <g transform="translate(32, 20)" fill="none" stroke="#FFFFFF" stroke-width="2">
+    <!-- Caule -->
+    <line x1="0" y1="0" x2="0" y2="20" stroke-width="2.5"/>
+    
+    <!-- Folhas (de baixo para cima) - versão simplificada -->
+    <path d="M0,20 C-15,20 -18,12 0,12 C18,12 15,20 0,20 Z" />
+    <path d="M0,12 C-12,12 -15,6 0,6 C15,6 12,12 0,12 Z" />
+    <path d="M0,6 C-8,6 -10,0 0,0 C10,0 8,6 0,6 Z" />
+  </g>
+  
+  <!-- Letra C estilizada -->
+  <path d="M32,50 C24,50 18,46 18,40 C18,34 24,30 32,30 C36,30 40,31 42,33" 
+        fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+</svg>
