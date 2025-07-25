@@ -25,14 +25,13 @@ export default [
       'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
       'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
       'no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
-      
       // Boas práticas
       'curly': ['warn', 'all'],
       'eqeqeq': ['warn', 'always'],
       'no-alert': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
       'no-eval': 'error',
       'no-implied-eval': 'error',
-      
+
       // Estilo
       'array-bracket-spacing': ['warn', 'never'],
       'block-spacing': ['warn', 'always'],
