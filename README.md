@@ -1,64 +1,180 @@
-# CAPITAL - Agro Investors
+# Capital Agro Investors - WordPress Site
 
-Site institucional moderno, leve e responsivo para a CAPITAL Agro Investors, uma empresa que atua no setor agroindustrial, especializada na fabricação e consultoria de fertilizantes.
+Este projeto foi convertido de um site estático para WordPress, mantendo todo o design e funcionalidades originais.
 
-## 🎨 Características
+## 📋 Pré-requisitos
 
-- Design moderno e responsivo (mobile-first)
-- Animações de scroll suaves
-- Otimizado para SEO
-- Carregamento rápido com lazy loading para imagens
-- Botão de WhatsApp flutuante para contato rápido
+- PHP 7.4 ou superior
+- MySQL 5.7 ou superior (ou MariaDB 10.3+)
+- Servidor web (Apache ou Nginx)
+- WordPress 6.0 ou superior
 
-## 📐 Estrutura do Site
+## 🚀 Instalação
 
-- **Seção Hero**: Apresentação da empresa com chamada para ação
-- **Sobre a Empresa**: Descrição institucional com imagem
-- **Segmentos de Atuação**: Cards com ícones vetoriais
-- **Soluções**: Layout em colunas com ícones animados
-- **Formulário de Contato**: Campos para mensagem + informações de contato
-- **Rodapé**: Links rápidos, redes sociais e newsletter
+### 1. Configuração do Banco de Dados
 
-## 💻 Tecnologias Utilizadas
+1. Crie um banco de dados MySQL:
+```sql
+CREATE DATABASE capital_agro_wp;
+CREATE USER 'capital_user'@'localhost' IDENTIFIED BY 'sua_senha_segura';
+GRANT ALL PRIVILEGES ON capital_agro_wp.* TO 'capital_user'@'localhost';
+FLUSH PRIVILEGES;
+```
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- Font Awesome (ícones)
-- AOS.js (animações de scroll)
-- Lazy Loading nativo
+### 2. Configuração do WordPress
 
-## 🚀 Instalação e Uso
+1. Edite o arquivo `wp-config.php` e configure suas credenciais de banco de dados:
+```php
+define('DB_NAME', 'capital_agro_wp');
+define('DB_USER', 'capital_user');
+define('DB_PASSWORD', 'sua_senha_segura');
+define('DB_HOST', 'localhost');
+```
 
-1. Clone este repositório:
-   ```
-   git clone [URL_DO_REPOSITÓRIO]
-   ```
+2. Gere novas chaves de segurança em: https://api.wordpress.org/secret-key/1.1/salt/
+   E substitua as chaves no `wp-config.php`
 
-2. Navegue até a pasta do projeto:
-   ```
-   cd SiteCapital
-   ```
+### 3. Download do WordPress Core
 
-3. Abra o arquivo `index.html` em seu navegador ou utilize um servidor local.
+1. Baixe a versão mais recente do WordPress de: https://wordpress.org/download/
+2. Extraia os arquivos do WordPress na raiz do projeto (exceto wp-content que já está configurado)
+3. Mantenha a estrutura de pastas existente
 
-## 📁 Estrutura de Arquivos
+### 4. Instalação via Web
+
+1. Acesse seu domínio no navegador
+2. Siga o assistente de instalação do WordPress
+3. Configure:
+   - Título do site: "Capital Agro Investors"
+   - Nome de usuário: (escolha um nome seguro)
+   - Senha: (use uma senha forte)
+   - Email: seu email administrativo
+
+### 5. Ativação do Tema
+
+1. Acesse o painel administrativo (`/wp-admin`)
+2. Vá em **Aparência > Temas**
+3. Ative o tema "Capital Agro"
+
+## ⚙️ Configuração do Tema
+
+### Menus
+
+1. Vá em **Aparência > Menus**
+2. Crie um novo menu chamado "Menu Principal"
+3. Adicione os itens:
+   - Home
+   - Sobre
+   - Culturas
+   - Segmentos
+   - Soluções
+   - Parceiros
+   - Trabalhe Conosco
+   - Contato
+4. Atribua ao local "Menu Principal"
+
+### Widgets
+
+1. Vá em **Aparência > Widgets**
+2. Configure as áreas de widget do rodapé conforme necessário
+
+### Customizações
+
+1. Vá em **Aparência > Personalizar**
+2. Configure:
+   - Logo do site
+   - Cores (se necessário)
+   - Informações de contato
+
+### Tipos de Post Personalizados
+
+O tema inclui os seguintes tipos de post:
+
+#### Culturas
+- Campos: Título, Descrição, Imagem, Ícone
+- Use para cadastrar as culturas atendidas
+
+#### Soluções
+- Campos: Título, Descrição, Imagem
+- Use para cadastrar as soluções oferecidas
+
+#### Parceiros
+- Campos: Nome, Logo, Link (opcional)
+- Use para cadastrar os parceiros da empresa
+
+### Configurações da Empresa
+
+1. Vá em **Configurações > Capital Agro**
+2. Configure:
+   - Telefone
+   - Email
+   - Endereço
+   - Redes sociais
+
+## 📱 Funcionalidades
+
+- ✅ Design responsivo
+- ✅ SEO otimizado
+- ✅ Formulários de contato
+- ✅ Newsletter
+- ✅ Integração com WhatsApp
+- ✅ Animações AOS
+- ✅ Bootstrap 5
+- ✅ Font Awesome
+- ✅ Tipos de post personalizados
+- ✅ Campos personalizados
+- ✅ Áreas de widget
+- ✅ Menus personalizados
+
+## 🔧 Desenvolvimento
+
+### Estrutura do Tema
 
 ```
-├── index.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── img/
-│       ├── logo.png
-│       ├── logo-footer.png
-│       ├── hero-bg.jpg
-│       └── sobre.jpg
-└── README.md
+wp-content/themes/capital-agro/
+├── style.css          # Estilos principais
+├── functions.php      # Funcionalidades do tema
+├── index.php          # Template principal
+├── header.php         # Cabeçalho
+├── footer.php         # Rodapé
+└── assets/           # Recursos estáticos
+    ├── css/
+    ├── js/
+    └── img/
 ```
+
+### Hooks Disponíveis
+
+- `capital_agro_after_hero` - Após a seção hero
+- `capital_agro_before_footer` - Antes do rodapé
+- `capital_agro_custom_fields` - Para adicionar campos personalizados
+
+## 🛡️ Segurança
+
+- Configurações de segurança no `.htaccess`
+- Proteção de arquivos sensíveis
+- Headers de segurança configurados
+- Validação e sanitização de dados
+
+## 📈 Performance
+
+- Cache de navegador configurado
+- Compressão GZIP ativada
+- Otimização de imagens
+- Minificação de CSS/JS (via plugins recomendados)
+
+## 🔌 Plugins Recomendados
+
+- **Yoast SEO** - Otimização para motores de busca
+- **Contact Form 7** - Formulários de contato
+- **WP Rocket** - Cache e performance
+- **Wordfence** - Segurança
+- **UpdraftPlus** - Backup
+- **Advanced Custom Fields** - Campos personalizados adicionais
+
+## 📞 Suporte
+
+Para suporte técnico ou dúvidas sobre o tema, entre em contato com a equipe de desenvolvimento.
 
 ## 📝 Personalização
 

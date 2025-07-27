@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="conilonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#f8f9fa"/>
+  <g transform="translate(100,100)">
+    <!-- Galho com frutos -->
+    <line x1="0" y1="-40" x2="0" y2="40" stroke="#654321" stroke-width="4"/>
+    <!-- Frutos de café conilon -->
+    <circle cx="-8" cy="-25" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <circle cx="8" cy="-25" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <circle cx="-8" cy="-10" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <circle cx="8" cy="-10" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <circle cx="-8" cy="5" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <circle cx="8" cy="5" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <circle cx="-8" cy="20" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <circle cx="8" cy="20" r="6" fill="url(#conilonGrad)" stroke="#654321" stroke-width="1"/>
+    <!-- Folhas -->
+    <ellipse cx="-20" cy="-30" rx="12" ry="8" fill="#228B22" transform="rotate(-30 -20 -30)"/>
+    <ellipse cx="20" cy="-30" rx="12" ry="8" fill="#228B22" transform="rotate(30 20 -30)"/>
+    <ellipse cx="-20" cy="0" rx="10" ry="6" fill="#32CD32" transform="rotate(-20 -20 0)"/>
+    <ellipse cx="20" cy="0" rx="10" ry="6" fill="#32CD32" transform="rotate(20 20 0)"/>
+  </g>
+  <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c5530">CAFÉ CONILON</text>
+</svg>
